@@ -20,7 +20,7 @@ from sklearn.preprocessing import LabelEncoder, StandardScaler
 import joblib
 
 # Load the data
-df = pd.read_csv('/content/student_data.csv')
+df = pd.read_csv('student_data.csv')
 print(" Dataset loaded successfully!")
 print(f"Shape: {df.shape}")
 df.head()
