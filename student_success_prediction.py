@@ -41,11 +41,11 @@ print(df.isnull().sum())
 print("\n=== Duplicates ===")
 print("Duplicates found:", df.duplicated().sum())
 
-# Remove duplicates if any
+# Remove duplicates
 df = df.drop_duplicates()
 print(" Duplicates removed (if any)")
 
-# 2. Encode categorical variables (as required by the project)
+# 2. Encode categorical variables 
 categorical_cols = df.select_dtypes(include=['object']).columns.tolist()
 print("Categorical columns encoded:", categorical_cols)
 
@@ -57,7 +57,7 @@ for col in categorical_cols:
 
 print(" All categorical variables encoded!")
 
-# 3. Scale numerical features (demonstration - we will use unscaled for Random Forest)
+# 3. Scale numerical features 
 numeric_cols = ['age', 'Medu', 'Fedu', 'traveltime', 'studytime', 'failures',
                 'famrel', 'freetime', 'goout', 'Dalc', 'Walc', 'health',
                 'absences', 'G1', 'G2', 'G3']
